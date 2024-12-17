@@ -1,0 +1,43 @@
+/* Top Navbar Styling */
+.top-nav {
+    height: 5rem; /* Adjust height as needed */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    padding: 0.5rem 1rem; /* Optional vertical padding */
+}
+
+/* Bottom Navbar Link Font Size */
+.navbar-nav{
+    font-size: 1.2rem; /* Increase font size */
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+}
+
+.navbar-brand {
+    font-size: 1.2rem; /* Increase font size */
+    margin-left: 3.5rem;
+    font-weight: bold;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center; /* Align image and text vertically */
+    height: 100%; /* Ensure logo takes full height of navbar */
+}
+
+.logo-img {
+    width: auto; /* Maintain aspect ratio */
+    max-width: 150px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between the image and text */
+    object-fit: contain; /* Ensure the image fits well without being stretched */
+    max-height: 100%; /* Make sure the image fits within the navbar's height */
+}
+
+.logo-text {
+    font-size: 1.3rem; /* Adjust the size of the text */
+    font-weight: bold; /* Optional: make the text bold */
+    line-height: 1.2; /* Adjust line height to give some space between lines */
+    text-align: center; /* Center-align the text */
+}
