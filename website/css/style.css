@@ -14,7 +14,7 @@
 }
 
 .header .logo-container img {
-    max-height: 4vw; /* Adjust logo size based on viewport width */
+    max-height: 5vw; /* Adjust logo size based on viewport width */
     width: auto;
 }
 
