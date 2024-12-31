@@ -1,7 +1,11 @@
-/* Header Link Font Size */
+/* Header*/
+/* Header Styling */
 .header {
-    padding: 10px 110px;  /* Reduced header padding for smaller height */
+    padding: 10px 5vw; /* Adjust padding based on screen width */
     background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header .logo-container {
@@ -10,47 +14,44 @@
 }
 
 .header .logo-container img {
-    max-height: 60px; /* Adjusted logo height to reduce overall header height */
+    max-height: 4vw; /* Adjust logo size based on viewport width */
     width: auto;
-     /* Reduced gap between logo and text */
 }
 
-.header .logo-text {
-    font-size: 18px; /* Adjust text size */
-    line-height: 1.2;
-    margin: 0;
-    font-weight: bold;
-}
-
-.header .logo-text div {
+.header .company-name {
+    font-size: 1vw; /* Font size based on viewport width */
+    font-weight: bold; /* Bold the company name */
     text-align: center;
 }
 
 .header .right-side {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .header .contact-info {
     display: inline-flex;
     align-items: center;
-    margin-left: 15px;
-    font-size: 16px;
+    margin-left: 1vw;
+    font-size: 1.5vw;
 }
 
 .header .contact-info i {
-    margin-right: 8px;
-    font-size: 18px;
-    color: #555;
+    margin-right: 0.5vw;
+    font-size: 1.5vw;
 }
 
 .separator {
-    font-size: 20px;
+    font-size: 1.5vw;
     color: #555;
-    margin: 0 10px; /* Adds space around the pipe */
+    margin: 0 1vw; /* Added space around the pipe */
 }
 
 
-/*second navbar*/
+
+
+/*NAVBAR*/
 
 .navbar{
     background-color: orange;
@@ -179,7 +180,9 @@ h2{
 
 p{
     font-size: 1rem;
-}/**About Us Read more**/
+}
+
+/**About Us Read more**/
 
 about .aboutus h1{
     text-align: center;
@@ -523,6 +526,9 @@ header2 header ul li ul li ul{
    top:0;
 }
 
+/*Resposive Header*/
+
+
 /*Responsive Navbar*/
 @media screen and (min-width:769px) {
     .dropend:hover>.dropdown-menu {
@@ -536,50 +542,91 @@ header2 header ul li ul li ul{
   }
 
 /**Responsive About Us**/
+@media screen and (max-width: 1200px) {
+    .section-padding {
+        padding: 4rem 8rem;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+}
 
-@media screen and (max-width: 768px){
-    aboutus .image-section{
-        width:100%;
-        float: none;
+@media screen and (max-width: 992px) {
+    .section-padding {
+        padding: 3rem 6rem;
     }
-    
-    aboutus .content{
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    p {
+        font-size: 1.1rem;
+    }
+
+    #about .col-lg-4 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    #about .col-lg-8 {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-padding {
+        padding: 2rem 4rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #about .about-img img {
         width: 100%;
-        float: none;
-        margin-left: 0px;
+        height: auto;
     }
-    
-    aboutus .content h1{
-        font-size: 48px;
-        letter-spacing: 2px;
-        margin-top: 30px;
+}
+
+@media screen and (max-width: 576px) {
+    .section-padding {
+        padding: 2rem 3rem;
     }
-    
-    aboutus .content h2{
-        font-size: 30px;
+
+    h1 {
+        font-size: 2rem;
     }
-    
-    aboutus .content p{
-        font-size: 18px;
+
+    h2 {
+        font-size: 1.2rem;
     }
-    
+
+    p {
+        font-size: 0.9rem;
     }
-    
-    @media screen and (max-width: 426px){
-    aboutus .image-section{
-        width:100%;
-        float: none;
-        margin-left: -65px;
-        
+
+    #about .about-text {
+        padding-left: 0;
     }
-    
-    aboutus .content{
-        width: 160%;
-        float: none;
-        margin-left: -65px;
-    
-    }
-    }
+}
     
     
     /**Responsive Contact Us**/
@@ -620,105 +667,100 @@ header2 header ul li ul li ul{
     }
     
     
-    /**Responsive Sub Menu Content 1**/
+    /**Responsive Sub Menu Content**/
     
-    @media screen and (max-width: 768px){
-    menucontent .image-section{
-        width:100%;
-        float: none;
-        
+    @media (max-width: 1200px) {
+        menucontent .image-section, menucontent2 .image-section {
+            width: 40%;
+        }
+        menucontent .content, menucontent2 .content {
+            width: 55%;
+        }
     }
     
-    menucontent .content{
-        width: 130%;
-        float: none;
-        margin-left: -30px;
+    @media (max-width: 992px) {
+        menucontent .row, menucontent2 .row {
+            padding: 30px 50px;
+        }
     
-    }
+        menucontent .image-section, menucontent2 .image-section {
+            width: 50%;
+            margin-top: 20px;
+        }
     
-    menucontent .content h1{
-        font-size: 29px;
-        letter-spacing: 2px;
-        margin-top: 30px;
-        align-items: center;
-    }
+        menucontent .content, menucontent2 .content {
+            width: 50%;
+            margin-left: 0;
+        }
     
-    menucontent .content h2{
-        font-size: 29px;
-    }
-    menucontent .content p1{
-        font-size: 18px;
-        font-weight: bold;
-    }
+        menucontent .content h1, menucontent2 .content h1 {
+            font-size: 2em;
+        }
     
-    menucontent .content p2{
-        font-size: 18px;
+        menucontent .content p1, menucontent2 .content p1, menucontent .content p2, menucontent2 .content p2 {
+            font-size: 18px;
+        }
     }
     
+    @media (max-width: 768px) {
+        menucontent .row, menucontent2 .row {
+            padding: 20px 30px;
+        }
+    
+        menucontent .image-section, menucontent2 .image-section {
+            width: 100%;
+            margin-top: 20px;
+        }
+    
+        menucontent .content, menucontent2 .content {
+            width: 100%;
+            margin-left: 0;
+        }
+    
+        menucontent .content h1, menucontent2 .content h1 {
+            font-size: 1.8em;
+        }
+    
+        menucontent .content h2, menucontent2 .content h2 {
+            font-size: 1.6em;
+        }
+    
+        menucontent .content p1, menucontent2 .content p1, menucontent .content p2, menucontent2 .content p2 {
+            font-size: 16px;
+        }
     }
     
-    @media screen and (max-width: 426px){
-    menucontent .image-section{
-        width:100%;
-        float: none;
-        
+    @media (max-width: 576px) {
+        menucontent .content h1, menucontent2 .content h1 {
+            font-size: 1.6em;
+        }
+    
+        menucontent .content h2, menucontent2 .content h2 {
+            font-size: 1.4em;
+        }
+    
+        menucontent .content p1, menucontent2 .content p1, menucontent .content p2, menucontent2 .content p2 {
+            font-size: 14px;
+        }
+    }
+
+    /*Responsive Company Slider*/
+    @media (max-width: 1200px) {
+        .product {
+            flex: 0 0 33.33%; /* 3 products visible */
+        }
     }
     
-    menucontent .content{
-        width: 160%;
-        float: none;
-        margin-left: -30px;
-    
-    }
+    @media (max-width: 768px) {
+        .product {
+            flex: 0 0 33.33%; /* 3 products visible */
+        }
     }
     
-    /**Responsive Sub Menu Content 2**/
-    
-    @media screen and (max-width: 768px){
-    menucontent2 .image-section{
-        width:100%;
-        float: none;
-        
+    @media (max-width: 480px) {
+        .product {
+            flex: 0 0 50%; /* 2 products visible */
+        }
     }
     
-    menucontent2 .content{
-        width: 130%;
-        float: none;
-        margin-left: -20px;
-    }
     
-    menucontent2 .content h1{
-        font-size: 29px;
-        letter-spacing: 2px;
-        margin-top: 30px;
-        align-items: center;
-    }
-    
-    menucontent2 .content h2{
-        font-size: 29px;
-    }
-    menucontent2 .content p1{
-        font-size: 18px;
-        font-weight: bold;
-    }
-    
-    menucontent2 .content p2{
-        font-size: 18px;
-    }
-    
-    }
-    
-    @media screen and (max-width: 426px){
-    menucontent .image-section{
-        width:100%;
-        float: none;
-        
-    }
-    
-    menucontent .content{
-        width: 160%;
-        float: none;
-        margin-left: -30px;
-    
-    }
-    }

@@ -1,18 +1,29 @@
 $(document).ready(function () {
-    let currentIndex = 0; // Start with the second product
+    let currentIndex = 0;
     const totalProducts = $('.product').length;
-    const visibleProducts = 6; // Number of visible products
-    let autoplayInterval; // Interval reference for autoplay
+    let visibleProducts = 6; // Default number of visible products
+    let autoplayInterval;
+
+    // Update visibleProducts based on screen width
+    function updateVisibleProducts() {
+        if (window.innerWidth <= 480) {
+            visibleProducts = 2; // 2 product visible on small screens
+        } else if (window.innerWidth <= 768) {
+            visibleProducts = 3; // 3 products visible on medium screens
+        } else {
+            visibleProducts = 6; // 6 products visible on large screens
+        }
+    }
 
     // Function to move the slider
     function moveSlider() {
-        const offset = -(currentIndex * 100 / visibleProducts) + '%'; // 3 products visible
+        const offset = -(currentIndex * 100 / visibleProducts) + '%';
         $('.slider-wrapper').css('transform', 'translateX(' + offset + ')');
         updateActiveProduct();
         updateIndicators();
     }
 
-    // Update the active product style
+    // Update active product style
     function updateActiveProduct() {
         $('.product').removeClass('active');
         $('.product').eq(currentIndex % totalProducts).addClass('active');
@@ -27,7 +38,7 @@ $(document).ready(function () {
     // Next button
     $('#nextBtn').click(function () {
         if (currentIndex >= totalProducts - visibleProducts) {
-            currentIndex = 0; // Recycle to start
+            currentIndex = 0;
         } else {
             currentIndex++;
         }
@@ -38,7 +49,7 @@ $(document).ready(function () {
     // Prev button
     $('#prevBtn').click(function () {
         if (currentIndex <= 0) {
-            currentIndex = totalProducts - visibleProducts; // Recycle to end
+            currentIndex = totalProducts - visibleProducts;
         } else {
             currentIndex--;
         }
@@ -57,12 +68,12 @@ $(document).ready(function () {
     function startAutoplay() {
         autoplayInterval = setInterval(function () {
             if (currentIndex >= totalProducts - visibleProducts) {
-                currentIndex = 0; // Recycle to start
+                currentIndex = 0;
             } else {
                 currentIndex++;
             }
             moveSlider();
-        }, 3000); // 3 seconds
+        }, 3000);
     }
 
     // Stop autoplay
@@ -76,9 +87,16 @@ $(document).ready(function () {
         startAutoplay();
     }
 
-    // Initial move to set the active product and indicators
+    // Initial setup
+    updateVisibleProducts();
     moveSlider();
     startAutoplay();
+
+    // Update visible products on window resize
+    $(window).resize(function () {
+        updateVisibleProducts();
+        moveSlider();
+    });
 
     // Optional: Pause autoplay on hover
     $('.product-slider').hover(stopAutoplay, startAutoplay);
