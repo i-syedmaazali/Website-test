@@ -14,7 +14,7 @@
 }
 
 .header .logo-container img {
-    max-height: 10vw; /* Adjust logo size based on viewport width */
+    max-height: 4vw; /* Adjust logo size based on viewport width */
     width: auto;
 }
 
@@ -527,7 +527,19 @@ header2 header ul li ul li ul{
 }
 
 /*Resposive Header*/
+@media (max-width: 768px) {
+    .header .logo-container img {
+        max-height: 10vw; /* Adjust image size for tablet/mobile */
+    }
 
+    .header .company-name {
+        font-size: 2vw; /* Adjust logo text for tablet/mobile */
+    }
+
+    .header .contact-info {
+        font-size: 1.8vw; /* Adjust right side content for tablet/mobile */
+    }
+}
 
 /*Responsive Navbar*/
 @media screen and (min-width:769px) {
@@ -759,7 +771,7 @@ header2 header ul li ul li ul{
     
     @media (max-width: 480px) {
         .product {
-            flex: 0 0 50%; /* 2 products visible */
+            flex: 0 0 33.33%; /* 3 products visible */
         }
     }
     
