@@ -241,20 +241,20 @@ about .wrapper{
     margin-top: -4px;
 }
 
-h1 {
+.contactus h1 {
     font-size: 3em;
     text-align: center;
     margin-bottom: 20px;
     color: #333;
 }
 
-.contact {
+.contactus .contact {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.country {
+.contactus .country {
     flex: 1 1 calc(50% - 20px);
     margin: 10px;
     padding: 15px;
@@ -263,28 +263,28 @@ h1 {
     border-radius: 8px;
 }
 
-h2 {
+.contactus h2 {
     color: #555;
 }
 
-p {
+.contactus p {
     margin: 5px 0;
     font-size: 1.1em;
     display: flex;
     align-items: center; /* Aligns icon vertically with text */
 }
 
-i {
+.contactus i {
     min-width: 40px;
     font-size: 1.5em;
     margin: 0 15px; /* Adds space between the icon and text */
 }
 
-p:not(:last-child) {
+.contactus p:not(:last-child) {
     margin-bottom: 15px; /* Adds consistent gap between address, email, and phone number */
 }
 
-iframe {
+.contactus iframe {
     border: none;
     border-radius: 5px;
     margin-top: 10px;
@@ -518,109 +518,164 @@ header2 header ul li ul li ul{
 }
     
     
-/**Responsive Contact Us**/
-    
+/* Responsive Contact Us */
 @media (max-width: 768px) {
-    .country {
-        flex: 1 1 100%;
+    .contactus {
+        padding: 20px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .contactus h1 {
+        font-size: 2.5em; /* Adjust font size for header */
+        text-align: center; /* Center-align header text */
+        margin-bottom: 20px; /* Add margin for spacing */
+    }
+
+    .contactus .contact {
+        display: block; /* Stack the contact items vertically */
+        justify-content: center; /* Center the content */
+    }
+
+    .contactus .country {
+        flex: 1 1 100%; /* Full width for each country section */
+        margin: 10px 0; /* Adjust margin for spacing between sections */
+        padding: 15px;
+    }
+
+    .contactus p {
+        font-size: 1.1em; /* Slightly adjust font size for mobile */
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px; /* Consistent gap between items */
+    }
+
+    .contactus i {
+        font-size: 1.5em; /* Adjust icon size for mobile */
+        margin-right: 10px; /* Adjust spacing between icon and text */
+    }
+
+    .contactus iframe {
+        width: 100%; /* Make map iframe responsive */
+        height: 200px; /* Fixed height for map */
+        border-radius: 8px;
+        margin-top: 20px; /* Add space below the map */
+    }
+
+    /* Adjusting the layout for very small screens (below 576px) */
+    @media (max-width: 576px) {
+        .contactus {
+            padding: 15px 15px; /* Further reduce padding for very small screens */
+        }
+
+        .contactus h1 {
+            font-size: 2em; /* Reduce header font size for small screens */
+        }
+
+        .contactus p {
+            font-size: 1em; /* Further reduce paragraph font size */
+        }
+
+        .contactus iframe {
+            height: 180px; /* Further reduce map iframe height for very small screens */
+        }
+    }
+}
+
+    
+    
+/**Responsive Sub Menu Content**/
+    
+@media (max-width: 1200px) {
+    menucontent .image-section, menucontent2 .image-section {
+        width: 40%;
+    }
+    menucontent .content, menucontent2 .content {
+        width: 55%;
     }
 }
     
-    
-    /**Responsive Sub Menu Content**/
-    
-    @media (max-width: 1200px) {
-        menucontent .image-section, menucontent2 .image-section {
-            width: 40%;
-        }
-        menucontent .content, menucontent2 .content {
-            width: 55%;
-        }
+@media (max-width: 992px) {
+    menucontent .row, menucontent2 .row {
+        padding: 30px 50px;
     }
     
-    @media (max-width: 992px) {
-        menucontent .row, menucontent2 .row {
-            padding: 30px 50px;
-        }
-    
-        menucontent .image-section, menucontent2 .image-section {
-            width: 50%;
-            margin-top: 20px;
-        }
-    
-        menucontent .content, menucontent2 .content {
-            width: 50%;
-            margin-left: 0;
-        }
-    
-        menucontent .content h1, menucontent2 .content h1 {
-            font-size: 2em;
-        }
-    
-        menucontent .content p1, menucontent2 .content p1, menucontent .content p2, menucontent2 .content p2 {
-            font-size: 18px;
-        }
+    menucontent .image-section, menucontent2 .image-section {
+        width: 50%;
+        margin-top: 20px;
     }
     
-    @media (max-width: 768px) {
-        menucontent .row, menucontent2 .row {
-            padding: 20px 30px;
-        }
-    
-        menucontent .image-section, menucontent2 .image-section {
-            width: 100%;
-            margin-top: 20px;
-        }
-    
-        menucontent .content, menucontent2 .content {
-            width: 100%;
-            margin-left: 0;
-        }
-    
-        menucontent .content h1, menucontent2 .content h1 {
-            font-size: 1.8em;
-        }
-    
-        menucontent .content h2, menucontent2 .content h2 {
-            font-size: 1.6em;
-        }
-    
-        menucontent .content p1, menucontent2 .content p1, menucontent .content p2, menucontent2 .content p2 {
-            font-size: 16px;
-        }
+    menucontent .content, menucontent2 .content {
+        width: 50%;
+        margin-left: 0;
     }
     
-    @media (max-width: 576px) {
-        menucontent .content h1, menucontent2 .content h1 {
-            font-size: 1.6em;
-        }
-    
-        menucontent .content h2, menucontent2 .content h2 {
-            font-size: 1.4em;
-        }
-    
-        menucontent .content p1, menucontent2 .content p1, menucontent .content p2, menucontent2 .content p2 {
-            font-size: 14px;
-        }
+    menucontent .content h1, menucontent2 .content h1 {
+        font-size: 2em;
     }
+    
+    menucontent .content p1, menucontent2 .content p1, menucontent .content p2, menucontent2 .content p2 {
+        font-size: 18px;
+    }
+}
+    
+@media (max-width: 768px) {
+    menucontent .row, menucontent2 .row {
+        padding: 20px 30px;
+    }
+    
+    menucontent .image-section, menucontent2 .image-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    menucontent .content, menucontent2 .content {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    menucontent .content h1, menucontent2 .content h1 {
+        font-size: 1.8em;
+    }
+    
+    menucontent .content h2, menucontent2 .content h2 {
+        font-size: 1.6em;
+    }
+    
+    menucontent .content p1, menucontent2 .content p1, menucontent .content p2, menucontent2 .content p2 {
+        font-size: 16px;
+    }
+}
+    
+@media (max-width: 576px) {
+    menucontent .content h1, menucontent2 .content h1 {
+        font-size: 1.6em;
+    }
+    
+    menucontent .content h2, menucontent2 .content h2 {
+        font-size: 1.4em;
+    }
+    
+    menucontent .content p1, menucontent2 .content p1, menucontent .content p2, menucontent2 .content p2 {
+        font-size: 14px;
+    }
+}
 
-    /*Responsive Company Slider*/
-    @media (max-width: 1200px) {
-        .product {
-            flex: 0 0 33.33%; /* 3 products visible */
-        }
+/*Responsive Company Slider*/
+@media (max-width: 1200px) {
+    .product {
+        flex: 0 0 33.33%; /* 3 products visible */
     }
+}
     
-    @media (max-width: 768px) {
-        .product {
-            flex: 0 0 33.33%; /* 3 products visible */
-        }
+@media (max-width: 768px) {
+    .product {
+        flex: 0 0 33.33%; /* 3 products visible */
     }
+}
     
-    @media (max-width: 480px) {
-        .product {
-            flex: 0 0 33.33%; /* 3 products visible */
-        }
+@media (max-width: 480px) {
+    .product {
+        flex: 0 0 33.33%; /* 3 products visible */
     }
+}
     
     
